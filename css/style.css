@@ -40,9 +40,10 @@ body {
   box-shadow: 0px 1px 2px gray;
 }
 
-img {
+.photo {
   border-radius: .5rem .5rem 0 0;
-  width: 100%;
+  width: 340px;
+  height: 288px;
 }
 
 .content {
