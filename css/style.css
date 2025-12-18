@@ -2,6 +2,7 @@
 /* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
 body {
   margin: 0;
+  padding: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
@@ -10,22 +11,80 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  background: linear-gradient(135deg, #f9fafb, #d2d6db);
+  margin-top: 7.5rem;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
 }
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-.credits {
-  color: #777;
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  font-size: 11px;
-  text-align: center;
+:root {
+  --indigo--color: #4338ca;
+  --dark--color: #171717;
+  --gray--color: #525252;
+  --dark--green: #15803d;
+  --green--color: #bbd7d0;
+  --light-green: #f0fdf4;
 }
 
-.credits a {
-  color: #000;
-  font-weight: bold;
+.container {
+  max-width: 340px;
+  background: #fff;
+  border-radius: .5rem;
+  box-shadow: 0px 1px 2px gray;
+}
+
+img {
+  border-radius: .5rem .5rem 0 0;
+  width: 100%;
+}
+
+.content {
+  padding: 1.5rem 1rem;
+  gap: .75rem;
+}
+
+.tag {
+  padding: .125rem .5rem;
+  margin: 0;
+  background: var(--light-green);
+  border: 1px solid var(--green--color);
+  color: var(--dark--green);
+  border-radius: 20px;
+  display: inline;
+  font-size: 0.875rem;
+}
+
+.title {
+font-size: 1.125rem;
+font-weight: 600;
+color: var(--dark--color);
+}
+
+.para {
+  font-size: 1rem;
+  color: var(--gray--color);
+  margin-bottom: 1.5rem;
+  margin-top: .75rem;
+}
+
+button {
+  display: flex;
+  background: none;
+  border: none;
+  color: var(--indigo--color);
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 0;
+}
+
+.arrow {
+  width: 1.25rem;
+  margin-left: .5rem;
 }
